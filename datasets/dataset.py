@@ -10,8 +10,8 @@ from torchvision import transforms
 mean_train = [0.485, 0.456, 0.406]
 std_train = [0.229, 0.224, 0.225]
 
-DATA_ROOT = 'C:\\Users\libro\CDO\datasets'  # content para mydrive
-MVTEC2D_DIR = 'C:\\Users\libro\CDO\datasets\mvtec_anomaly_detection'
+DATA_ROOT = '/content/CDO/datasets'  
+MVTEC2D_DIR = '/content/drive/MyDrive/mvtec_anomaly_detection'
 MVTEC3D_DIR = 'mvtec_3d_anomaly_detection'
 
 mvtec2d_classes = ['carpet', 'grid', 'leather', 'tile', 'wood',
