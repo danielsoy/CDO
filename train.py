@@ -49,7 +49,7 @@ def test_epoch(model: CDOModel, dataloader: DataLoader, device: str, is_vis, img
         outputs = model(data)
         score = model.cal_am(**outputs)
 
-        niuscore=(score.abs().sum() )
+        niuscore=(score.mean() *100 )
         print("niuscore = ", niuscore)  # niuscore=(score.abs().sum() )
 
         if scores is None:
