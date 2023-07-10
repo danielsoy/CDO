@@ -48,6 +48,7 @@ def test_epoch(model: CDOModel, dataloader: DataLoader, device: str, is_vis, img
         data = data.to(device)
         outputs = model(data)
         score = model.cal_am(**outputs)
+        print("score = ", score)
 
         if scores is None:
             scores = []
@@ -64,7 +65,7 @@ def test_epoch(model: CDOModel, dataloader: DataLoader, device: str, is_vis, img
 
     result_dict = {'i_roc': img_roc_auc * 100, 'p_roc': per_pixel_rocauc * 100, 'p_pro': pro_auc_score * 100,
                    'threshold': threshold}
-    print("pro_auc_score * 100 = ",pro_auc_score * 100)
+    #print("pro_auc_score * 100 = ",pro_auc_score * 100)
     return result_dict
 
 
